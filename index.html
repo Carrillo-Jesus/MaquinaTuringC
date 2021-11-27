@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Máquinas de Turing</title>
+    <!--<script type="text/javascript" src="scripts/modal.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="vis/dist/vis.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/modal.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="css/fontawesome.css">-->
+</head>
+
+<body class="p-5">
+    <button class="bg-transparent btn" id="Ingles" onclick="Ingles()">
+         <img src="img/estados-unidos.png" width="40px" alt="">
+    </button>
+
+    <button class="btn bg-transparent" id="Español" onclick="Español()">
+        <img src="img/espana.png" alt="" width="40px">
+   </button>
+
+   <button class="btn bg-transparent" id="Portugues" onclick="Frances()">
+    <img src="img/francia.png" width="40px" alt="">
+    </button>
+    <div class="row padding" style="background-color: rgb(73, 75, 75)">
+        <div class="col-12">
+            <center>
+                <div class="sticky-top bg-transparent">
+                    <div class="col-12 my-3 text-center">
+                        <div class="col-12 text-center">
+
+                            <div class="text-center">
+                                <h1 class="titulo" id="titulo1">MAQUINA DE TURING</h1>
+                            </div>
+                            <button class="btn btn-info p-2 mb-2 bg-primary text-white" id="info">
+                                Ejemplos
+                            </button>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type=" text" class="form-control" placeholder="Cadena" id="cadena" />
+                                <span class="input-group-mb-3"> </span>
+                            </div>
+                            <div class="text-center">
+                                <button class="
+                      btn btn-primary btn-block
+                      p-2
+                      mb-2
+                      bg-pribtn-primary
+                      text-white
+                    " type="button" id="cargar" data-toggle="popover1" title="Hay un error"
+                                    data-content="Llene los campos" data-placemente="right" data-trigger="focus">
+                                    <span class=""></span> Iniciar cinta
+                                </button>
+
+                            </div>
+                        </div>
+                        <div class="col-12 my-4">
+                            <div class="slidecontainer text-light">
+                                <label id="velocidad">Velocidad:</label>
+                                <input type="range" min="0" max="1000" value="500" step="100" class="slider"
+                                    id="rango" />
+
+                                <button class="btn btn-primary p-2 mb-2 bg-primary text-white correr" id="evaluar" content="1">
+                                    <span class=""></span> Correr
+                                </button>
+                                <button class="btn btn-info p-2 mb-2 bg-light text-dark detener" id="evaluar" content="1"
+                                    onclick="Stop();">
+                                    <span class=""></span> Detener
+                                </button>
+
+
+                            </div>
+                        </div>
+                    </div>
+            </center>
+
+            <div class="tab-pane" id="tab4" role="tabpanel">
+                <center>
+                    <div class="d-inline">
+                        <div class="col-10">
+                            <table id="tabla4" class="
+                    table table-sm-hover
+                    text-center
+                    table-responsive
+                    text-light
+                  ">
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </center>
+            </div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="modalText" class="lead"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="cerrar" data-dismiss="modal">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="instrucciones4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">
+                                <h2 class="ejemplo" >Ejemplos</h2>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h5 id="int">Integrantes</h5>
+                            <p class="">
+                                Jesus Carrillo<br />
+                                Santiago Manrrique<br />
+                                Luis García<br />
+                            </p>
+                            <h5 class="ejemplo1" >Ejemplos:</h5>
+                            <p class="text-center texto">
+                                Ingresa: aaaaaaaaaaaaaabbbbbbbbbbbbabababbbbbbbbbbb<br />
+                                Regresa: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mynetwork" class="bg-dark"></div>
+    </div>
+    <script src="https://kit.fontawesome.com/529971f0d9.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="scripts/funciones.js"></script>
+    <script type="text/javascript" src="scripts/ui.js"></script>
+    <script type="text/javascript" src="vis/dist/vis.js"></script>
+    <script type="text/javascript" src="scripts/grafo.js"></script>
+    <script src="scripts/internacionalizacion.js"></script>
+</body>
+
+</html>
