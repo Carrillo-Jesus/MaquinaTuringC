@@ -37,7 +37,7 @@ function AddVacio(table){
 function cargarCadena(table){
   var cadena = $('#cadena').val();
       borrarTabla(table);
-      AddRow('α', "active-row", "bg-info text-light", table);
+      AddRow('α', "active-row", "bg-danger text-light", table);
       for(i = 0; i < cadena.length; i++){
           AddRow(cadena.charAt(i), "", "", table);
       }

@@ -36,3 +36,7 @@ font-style: italic;
   justify-content: center;
   column-gap: 20px;
 }
+.pa{
+  padding-left: 10%;
+  padding-right: 10%;
+}

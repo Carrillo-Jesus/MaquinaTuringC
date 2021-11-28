@@ -54,7 +54,7 @@ function ChangeActiveRow(table, time) { // This method requieres that 'the calle
     newRow = $('#new-row');
     newRow.attr('id', 'active-row');    
     ScrollLeftToID('active-row', time, table);
-    newRow.attr('class', 'bg-info text-light');
+    newRow.attr('class', 'bg-danger text-light');
 }
 
 function Clear(){
