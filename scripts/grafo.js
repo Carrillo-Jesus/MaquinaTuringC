@@ -8,7 +8,7 @@ var nodes = new vis.DataSet([
 
 var edges = new vis.DataSet([
     { id:0,from: 1, to: 1,color:{color:'#000'},selfReferenceSize:1,arrows:{to:{enabled:true,scaleFactor: 1.5}}},
-    { id:1,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'},label:'" ", a, R',arrows:{to:{enabled:true}}},
+    //{ id:1,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'},arrows:{to:{enabled:true}}},
     { id:2,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, arrows:{to:{enabled:true}},selfReferenceSize:50, label:'b, a, R'},
     { id:3,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, arrows:{to:{enabled:true}},selfReferenceSize:75, label:'a, a, R'},
     { id:4,from: 1, to: 2,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, length:200, label:'α, α, L',arrows:{to:{enabled:true}}},
