@@ -44,3 +44,7 @@ font-style: italic;
   margin-left: 10px;
   font-size: 20px;
 }
+.flex{
+  display: flex;
+  flex-direction: column;
+}
