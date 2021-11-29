@@ -8,6 +8,7 @@ let integrantes=document.getElementById('int');
 let Ejemplo=document.querySelector('.ejemplo');
 let Ejemplo1=document.querySelector('.ejemplo1');
 let textto=document.querySelector('.texto');
+let idiomas=document.getElementById('idiomas');
 
 function Ingles(){
     titulo.innerHTML="TURING MACHINE";
@@ -21,6 +22,7 @@ function Ingles(){
     Ejemplo.innerHTML="Examples"
     Ejemplo1.innerHTML="Examples:"
     textto.innerHTML= `Enter: aaaaaaaaaaaaaabbbbbbbbbbbbabababbbbbbbbbbb <br/> Come back: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`
+    idiomas.innerHTML="Languages:"
 }
 function Español(){
     titulo.innerHTML="MAQUINA DE TURING"
@@ -34,6 +36,7 @@ function Español(){
     Ejemplo.innerHTML="Ejemplos"
     Ejemplo1.innerHTML="Ejemplos:"
     textto.innerHTML= `Ingresa: aaaaaaaaaaaaaabbbbbbbbbbbbabababbbbbbbbbbb <br/> Regresa: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`
+    idiomas.innerHTML="Idiomas:"
     
 }
 function Frances(){
@@ -48,6 +51,7 @@ function Frances(){
     Ejemplo.innerHTML="Exemples"
     Ejemplo1.innerHTML="Exemples"
     textto.innerHTML= `Entrez : aaaaaaaaaaaaaabbbbbbbbbbbababababbbbbbbbbbb <br/> Retour : aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`
+    idiomas.innerHTML="Langues:"
 }
 
 

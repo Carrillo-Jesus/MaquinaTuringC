@@ -28,7 +28,7 @@ $(function() {
 });
 
 function AddVacio(table){
-  for(i = 0; i < 100; i++){
+  for(i = 0; i < 40; i++){
       AddRow(Vacio, "", "", table);
   }
   return true;
@@ -37,7 +37,7 @@ function AddVacio(table){
 function cargarCadena(table){
   var cadena = $('#cadena').val();
       borrarTabla(table);
-      AddRow('α', "active-row", "bg-danger text-light", table);
+      AddRow('λ', "active-row", "bg-danger text-light", table);
       for(i = 0; i < cadena.length; i++){
           AddRow(cadena.charAt(i), "", "", table);
       }
@@ -103,17 +103,17 @@ function Stop(){
 function SetMachine4(){
 
   Machines[4][0] = {
-      'α' : ['α', 1 , 1, 9]
+      'λ' : ['λ', 1 , 1, 9]
   }
   Machines[4][1] = {
       'a' : ['a', 1, 1, 3],
       'b' : ['a', 1, 1, 2],
-      
-      'α' : ['α', 2, -1, 4] 
+      ' ' : ['a', 1, 1, 2],
+      'λ' : ['λ', 2, -1, 4] 
   }
   Machines[4][2] = {
       'a' : ['a', 2, -1, 5],
-      'α' : ['α', 3, 1, 6]
+      'λ' : ['λ', 3, 1, 6]
   }
   Machines[4][3] = {
       'a' : ['a', 10, 0]

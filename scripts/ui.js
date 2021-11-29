@@ -1,4 +1,4 @@
-const Vacio = 'α';
+const Vacio = 'λ';
 var Tick = undefined;
 ID = 4;
 var Machines = {

@@ -8,12 +8,12 @@ var nodes = new vis.DataSet([
 
 var edges = new vis.DataSet([
     { id:0,from: 1, to: 1,color:{color:'#000'},selfReferenceSize:1,arrows:{to:{enabled:true,scaleFactor: 1.5}}},
-    //{ id:1,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'},arrows:{to:{enabled:true}}},
-    { id:2,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, arrows:{to:{enabled:true}},selfReferenceSize:50, label:'b, a, R'},
-    { id:3,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, arrows:{to:{enabled:true}},selfReferenceSize:75, label:'a, a, R'},
-    { id:4,from: 1, to: 2,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, length:200, label:'α, α, L',arrows:{to:{enabled:true}}},
-    { id:5,from: 2, to: 2,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, label:'a,a,L',selfReferenceSize:40,arrows:{to:{enabled:true}}},
-    { id:6,from: 2, to: 3,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, length:200, label:'α, α, R',arrows:{to:{enabled:true}} }
+    //{ id:1,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'},arrows:{to:{enabled:true}},selfReferenceSize:70,label:'" "| a | R'},
+    { id:2,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, arrows:{to:{enabled:true}},selfReferenceSize:20, label:'b | a | R'},
+    { id:3,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, arrows:{to:{enabled:true}},selfReferenceSize:45, label:'a | a | R'},
+    { id:4,from: 1, to: 2,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, length:200, label:'λ | λ | L',arrows:{to:{enabled:true}}},
+    { id:5,from: 2, to: 2,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, label:'a | a | L',selfReferenceSize:40,arrows:{to:{enabled:true}}},
+    { id:6,from: 2, to: 3,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, length:200, label:'λ | λ | R',arrows:{to:{enabled:true}} }
 ]);
 
 var container = document.getElementById("mynetwork");
@@ -37,7 +37,7 @@ var network = new vis.Network(container, data,options);
   })
   
   network.on('afterDrawing', function(){
-    var dataN = [{id: 1, x: -400, y:40}, {id:2, x:-100, y:40}, {id:3, x:200, y:40}];
+    var dataN = [{id: 1, x: -300, y:40}, {id:2, x:-100, y:40}, {id:3, x:100, y:40}];
     nodes.update(dataN);
   })
 
