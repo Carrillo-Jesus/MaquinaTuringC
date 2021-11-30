@@ -1,7 +1,7 @@
 const Vacio = 'λ';
 var Tick = undefined;
 ID = 4;
-var Machines = {
+var MaquinaTuring = {
     4 : new Array()
 }
 borrarTabla(4);
@@ -64,17 +64,17 @@ function Clear(){
     $('#instrucciones').modal('hide');
 
     // SET MATCHINE
-    SetMachine4();
+    Turing();
     // SET COUNT
-    $('#contador').text(Machines[ID].Count);
+    $('#contador').text(MaquinaTuring[ID].Count);
     // SET STATE TO MACHINE'S HEAD
-    $('#estado').text(Machines[ID].Count);
+    $('#estado').text(MaquinaTuring[ID].Count);
 }
 
 function Update(){
        // SET COUNT
-       $('#contador').text(Machines[ID].Count);
+       $('#contador').text(MaquinaTuring[ID].Count);
        // SET STATE TO MACHINE'S HEAD
-       $('#estado').text(Machines[ID].State);
+       $('#estado').text(MaquinaTuring[ID].State);
 }
 

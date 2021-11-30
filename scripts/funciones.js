@@ -46,20 +46,20 @@ function cargarCadena(table){
 }
 
 function EvaluarNodo(symbol, id){
-  Machines[id].Count++;
-  symbols = Machines[id][Machines[id].State]
+  MaquinaTuring[id].Count++;
+  symbols = MaquinaTuring[id][MaquinaTuring[id].State]
   NextValues = symbols[symbol];
     actualizarGrafo(NextValues[3]);
   setTimeout(function(){resetEdges()}, tiempo+(tiempo/4));
-  if(symbols[symbol] == undefined) return { Error : true, Acceptable : Machines[id].Functions.Acceptable(Machines[id].State), Message : `El símbolo <strong>'${symbol}'</strong> no tiene transición definida en el estado <strong>${Machines[id].State}</strong> de esta máquina. ${symbols.ERROR ? symbols.ERROR : ''}`};
-  Machines[id].State = NextValues[1];
-  return { Error : false, Acceptable: Machines[id].Functions.Acceptable(Machines[id].State), Output : NextValues[0], Movement : NextValues[2] };
+  if(symbols[symbol] == undefined) return { Error : true, Acceptable : MaquinaTuring[id].Functions.Acceptable(MaquinaTuring[id].State), Message : `El símbolo <strong>'${symbol}'</strong> no tiene transición definida en el estado <strong>${MaquinaTuring[id].State}</strong> de esta máquina. ${symbols.ERROR ? symbols.ERROR : ''}`};
+  MaquinaTuring[id].State = NextValues[1];
+  return { Error : false, Acceptable: MaquinaTuring[id].Functions.Acceptable(MaquinaTuring[id].State), Output : NextValues[0], Movement : NextValues[2] };
 }
 
 function Evaluate(id){
       chain = $("#tabla" + id + " td");
-      i = Machines[id].i;
-      if(!Machines[id].Functions.Acceptable(Machines[id].State) && chain.length > i && Machines[id].Count < 10000){
+      i = MaquinaTuring[id].i;
+      if(!MaquinaTuring[id].Functions.Acceptable(MaquinaTuring[id].State) && chain.length > i && MaquinaTuring[id].Count < 10000){
           tiempo = 1000 - $("#rango").val();
           result = EvaluarNodo(chain[i].textContent.trim(), id);
           if(result.Error){
@@ -73,7 +73,7 @@ function Evaluate(id){
               if (i >= chain.length - 2) AddVacio(id);
               chain[i].textContent = (result.Output);
               i += result.Movement;
-              Machines[id].i += result.Movement;
+              MaquinaTuring[id].i += result.Movement;
               chain[i].setAttribute('id', 'new-row');
               ChangeActiveRow(id, tiempo);
               Update();
@@ -81,11 +81,11 @@ function Evaluate(id){
 
           
       }else{
-          if(Machines[id].Functions.Acceptable(Machines[id].State)){
+          if(MaquinaTuring[id].Functions.Acceptable(MaquinaTuring[id].State)){
               Update();            
               Stop();   
           }
-          if(Machines[id].Count >= 10000){
+          if(MaquinaTuring[id].Count >= 10000){
               Update();
               Stop();
               $('#modalTitle').html('¡Error!');
@@ -100,28 +100,28 @@ function Stop(){
   clearInterval(Tick);
 }
 // SYNTAXIS Machine[CURRENT_STATE] = { INCOMING_SYMBOL: [OUTPUT_SYMBOL, NEXT_STATE, HEAD_MOVEMENT]}
-function SetMachine4(){
+function Turing(){
 
-  Machines[4][0] = {
+  MaquinaTuring[4][0] = {
       'λ' : ['λ', 1 , 1, 9]
   }
-  Machines[4][1] = {
+  MaquinaTuring[4][1] = {
       'a' : ['a', 1, 1, 3],
       'b' : ['a', 1, 1, 2],
-      '' : ['a', 1, 1, 2],
+      '' : ['a', 1, 1, 1],
       'λ' : ['λ', 2, -1, 4] 
   }
-  Machines[4][2] = {
+  MaquinaTuring[4][2] = {
       'a' : ['a', 2, -1, 5],
       'λ' : ['λ', 3, 1, 6]
   }
-  Machines[4][3] = {
+  MaquinaTuring[4][3] = {
       'a' : ['a', 10, 0]
   }
-  Machines[4]['i'] = 0;
-  Machines[4]['Count'] = 0;
-  Machines[4]['State'] = 0;
-  Machines[4]['Functions'] = {
+  MaquinaTuring[4]['i'] = 0;
+  MaquinaTuring[4]['Count'] = 0;
+  MaquinaTuring[4]['State'] = 0;
+  MaquinaTuring[4]['Functions'] = {
       Acceptable(state) { return state == 3 }
   };
 }

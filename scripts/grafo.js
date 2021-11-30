@@ -8,7 +8,7 @@ var nodes = new vis.DataSet([
 
 var edges = new vis.DataSet([
     { id:0,from: 1, to: 1,color:{color:'#000'},selfReferenceSize:1,arrows:{to:{enabled:true,scaleFactor: 1.5}}},
-    //{ id:1,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'},arrows:{to:{enabled:true}},selfReferenceSize:70,label:'" "| a | R'},
+    { id:1,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'},arrows:{to:{enabled:true}},selfReferenceSize:70,label:'# | a | R'},
     { id:2,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, arrows:{to:{enabled:true}},selfReferenceSize:20, label:'b | a | R'},
     { id:3,from: 1, to: 1,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, arrows:{to:{enabled:true}},selfReferenceSize:45, label:'a | a | R'},
     { id:4,from: 1, to: 2,font: {color: '#ffffff',strokeWidth: 1,strokeColor: '#171a6b'},color:{color:'lightgrey'}, length:200, label:'λ | λ | L',arrows:{to:{enabled:true}}},
