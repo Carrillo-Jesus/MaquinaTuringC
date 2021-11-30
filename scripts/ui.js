@@ -24,7 +24,7 @@ function ScrollLeftToID(id, time, table){
 
     container = $('#tabla' + table);
     item = $('#' + id);
-    $('#tabla' + table).animate({ scrollLeft: item.offset().left - 3 * container.offset().left + container.scrollLeft() }, time >= 0 ? time:600, 'swing');
+    $('#tabla' + table).animate({ scrollLeft: item.offset().left - 1.5 * container.offset().left + container.scrollLeft() }, time >= 0 ? time:600, 'swing');
 }
 
 function AddRow(value, id_value, class_value, table){

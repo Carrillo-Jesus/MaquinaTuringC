@@ -21,7 +21,10 @@ function Ingles(){
     integrantes.innerHTML="Team mates"
     Ejemplo.innerHTML="Examples"
     Ejemplo1.innerHTML="Examples:"
-    textto.innerHTML= `Enter: aaaaaaaaaaaaaabbbbbbbbbbbbabababbbbbbbbbbb <br/> Come back: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`
+    textto.innerHTML= `Change "b" to "a" <br/> 
+    Enter: aaaaaaaaaaaaaabbbbbbbbbbbbabababbbbbbbbbbb <br/> 
+    Come back: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/><br/>
+    Note: In the case of spaces, the machine will convert them to "a"`
     idiomas.innerHTML="Languages:"
 }
 function Español(){
@@ -35,7 +38,10 @@ function Español(){
     integrantes.innerHTML="Intregantes"
     Ejemplo.innerHTML="Ejemplos"
     Ejemplo1.innerHTML="Ejemplos:"
-    textto.innerHTML= `Ingresa: aaaaaaaaaaaaaabbbbbbbbbbbbabababbbbbbbbbbb <br/> Regresa: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`
+    textto.innerHTML= ` Cambiar "b" por "a"<br/>
+    Ingresa: aaaaaaaaaaaaaabbbbbbbbbbbbabababbbbbbbbbbb<br/>
+    Regresa: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/><br/>
+    Nota: En caso de los espacios, la máquina los convertirá a "a"`
     idiomas.innerHTML="Idiomas:"
     
 }
@@ -50,7 +56,10 @@ function Frances(){
     integrantes.innerHTML="Membres"
     Ejemplo.innerHTML="Exemples"
     Ejemplo1.innerHTML="Exemples"
-    textto.innerHTML= `Entrez : aaaaaaaaaaaaaabbbbbbbbbbbababababbbbbbbbbbb <br/> Retour : aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`
+    textto.innerHTML= `Remplacez "b" par "a" <br/>
+    Entrez: aaaaaaaaaaaaaabbbbbbbbbbbbabababbbbbbbbbbbb <br />
+    Reviens Retour: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <br /><br/>
+    Remarque: Dans le cas des espaces, la machine les convertira en "a"`
     idiomas.innerHTML="Langues:"
 }
 
